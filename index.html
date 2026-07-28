@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Prisioneiro de Azkaban - Meu Blog Mágico</title>
+</head>
+<body style="background-color: #0f0c1b; color: #e0dbec; font-family: 'Georgia', serif; margin: 0; padding: 20px; background-image: radial-gradient(circle, #1a153a 10%, #0f0c1b 90%);">
+
+    <header style="text-align: center; padding: 40px 20px; border-bottom: 2px solid #7f5f1a;">
+        <h1 style="color: #d4af37; font-size: 3rem; margin: 0; text-shadow: 0px 0px 15px rgba(212, 175, 55, 0.6); letter-spacing: 2px;">
+            Expecto Patronum!
+        </h1>
+        <p style="font-style: italic; color: #a29bfe; font-size: 1.2rem;">Um mergulho no terceiro ano de Harry Potter em Hogwarts</p>
+    </header>
+
+    <main style="max-width: 800px; margin: 40px auto; line-height: 1.6;">
+
+        <article style="background-color: rgba(25, 20, 50, 0.6); padding: 25px; border-radius: 10px; border: 1px solid #3b3370; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <h2 style="color: #d4af37; margin-top: 0;">A Magia do Feitiço Patrono</h2>
+            <p style="color: #aaa2cc; font-size: 0.9rem;">Postado em: 24 de Junho de 2026</p>
+            
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOMNN-S5hfRPQzZe2LTqSA5uBpQU3-S9FHvcKrIMAY_xFwZg6ge8SgnI&s=10 alt="Luz mágica azul lembrando um Patrono" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; border: 1px solid #7f5f1a; margin: 15px 0;">
+            
+            <p>O terceiro ano de Harry é marcado por grandes perigos, mas também pelo aprendizado de uma das magias mais puras e complexas do mundo bruxo: o <strong>Feitiço Patrono</strong>. Para combater os Dementadores de Azkaban, Harry precisa se concentrar em sua lembrança mais feliz.</p>
+            
+            <div style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+                <button onclick="curtirPost('contador1', this)" style="background-color: #3b3370; color: #e0dbec; border: 1px solid #7f5f1a; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-family: 'Georgia', serif; font-size: 0.9rem; transition: 0.3s;">
+                    ⚡ Curtir
+                </button>
+                <span id="contador1" style="color: #d4af37; font-weight: bold;">0 curtidas</span>
+            </div>
+        </article>
+
+        <article style="background-color: rgba(25, 20, 50, 0.6); padding: 25px; border-radius: 10px; border: 1px solid #3b3370; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <h2 style="color: #d4af37; margin-top: 0;">"Juro Solenemente Não Fazer Nada de Bom"</h2>
+            <p style="color: #aaa2cc; font-size: 0.9rem;">Postado em: 23 de Junho de 2026</p>
+            
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM_iPceVsP4YRv_Inrx0lV5sODKAn6UnXD4GSkFKQXf2NkgHhG_KY7pYv1&s=10 alt="Livros antigos e mistério" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; border: 1px solid #7f5f1a; margin: 15px 0;">
+            
+            <p>Ganhado dos gêmeos Weasley, o <strong>Mapa do Maroto</strong> se torna a ferramenta crucial para Harry explorar Hogwarts escondido e descobrir segredos do passado de seu pai, Sirius Black, Remus Lupin e Peter Pettigrew.</p>
+            
+            <div style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+                <button onclick="curtirPost('contador2', this)" style="background-color: #3b3370; color: #e0dbec; border: 1px solid #7f5f1a; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-family: 'Georgia', serif; font-size: 0.9rem; transition: 0.3s;">
+                    ⚡ Curtir
+                </button>
+                <span id="contador2" style="color: #d4af37; font-weight: bold;">0 curtidas</span>
+            </div>
+        </article>
+
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #7f5f1a; border-top: 1px solid #3b3370; font-size: 0.9rem; font-style: italic;">
+        <p>Malfeito Feito. Blog criado para fins mágicos.</p>
+    </footer>
+
+    <script>
+        // Criamos um objeto para guardar os pontos/curtidas de cada post
+        const curtidas = {
+            contador1: 0,
+            contador2: 0
+        };
+
+        function curtirPost(idContador, botao) {
+            // Aumenta o número de curtidas do post clicado
+            curtidas[idContador]++;
+            
+            // Atualiza o texto na tela com o novo número
+            document.getElementById(idContador).innerText = curtidas[idContador] + " curtidas";
+            
+            // Efeito visual: muda o botão para dourado quando clicado!
+            botao.style.backgroundColor = "#d4af37";
+            botao.style.color = "#0f0c1b";
+            botao.innerText = "⚡ Curtido!";
+        }
+    </script>
+
+</body>
+</html>
